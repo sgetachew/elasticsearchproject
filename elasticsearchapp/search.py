@@ -6,6 +6,7 @@ from . import models
 
 connections.create_connection()
 
+
 class BlogPostIndex(DocType):
     author = Text()
     posted_date = Date()
@@ -14,6 +15,7 @@ class BlogPostIndex(DocType):
 
     class Meta:
         index = 'blogpost-index'
+
 
 def bulk_indexing():
     BlogPostIndex.init()
